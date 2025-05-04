@@ -4,12 +4,23 @@ languageCode = 'zh-cn'
 title = 'Joe'
 theme = 'PaperMod'
 
+[imaging]
+# 默认重采样过滤器，用于调整大小
+resampleFilter = "box"
+# 默认JPEG质量设置，默认为75
+quality = 75
+# 裁剪图片时使用的锚点，默认为"smart"
+anchor = "smart"
+# 默认背景色（用于不支持透明度的格式）
+bgColor = "#ffffff"
+
 [menu]
   [[menu.main]]
-    identifier = "product"
+    identifier = "products"
     name = "Products"
-    url = "/products/"
+    url = "/categories/products/"
     weight = 10
+
   [[menu.main]]
     identifier = "leetcode"
     name = "LeetCode"
