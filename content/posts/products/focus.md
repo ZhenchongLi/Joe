@@ -5,8 +5,6 @@ title = 'Focus - 基于行为科学的专注力计时器'
 categories = ['products']
 +++
 
-## 产品概述
-
 Focus是一款专为macOS设计的智能专注力计时器应用，融合了现代行为心理学原理与简洁高效的用户体验设计。不同于传统计时工具，Focus通过科学验证的时间管理方法和智能提醒机制，帮助用户建立高效的工作节奏，提升专注力和生产力。
 {{< img src="posts/focus-main.png" alt="Focus应用主界面" caption="" >}}
 
