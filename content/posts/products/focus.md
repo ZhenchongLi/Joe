@@ -7,12 +7,8 @@ categories = ['products']
 
 ## 产品概述
 
-{{< img src="posts/focus-main.png" alt="Focus应用主界面" caption="Focus应用主界面展示" >}}
-
 Focus是一款专为macOS设计的智能专注力计时器应用，融合了现代行为心理学原理与简洁高效的用户体验设计。不同于传统计时工具，Focus通过科学验证的时间管理方法和智能提醒机制，帮助用户建立高效的工作节奏，提升专注力和生产力。
-
-{{< img src="posts/focus-meun.png" alt="Focus菜单栏界面" caption="简洁的菜单栏控制界面" >}}
-
+{{< img src="posts/focus-main.png" alt="Focus应用主界面" caption="" >}}
 
 
 ## 核心功能
@@ -33,6 +29,7 @@ Focus是一款专为macOS设计的智能专注力计时器应用，融合了现�
 - 实时计时显示（HH:MM:SS格式）
 - 清晰的状态指示（工作中/休息中/已暂停）
 - 菜单栏同步显示，无需切换窗口即可查看状态
+  {{< img src="posts/focus-meun.png" alt="Focus菜单栏界面" caption="简洁的菜单栏控制界面" >}}
 
 ## 科学原理
 
