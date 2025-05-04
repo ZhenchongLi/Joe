@@ -1,4 +1,5 @@
-baseURL = 'https://fists.cc'
+baseURL = "/"
+relativeURLs = true
 languageCode = 'zh-cn'
 title = 'Joe'
 theme = 'PaperMod'
