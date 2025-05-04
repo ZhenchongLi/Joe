@@ -1,4 +1,16 @@
-baseURL = 'https://joeli.netlify.app'
+baseURL = 'https://fists.cc'
 languageCode = 'zh-cn'
 title = 'Joe'
 theme = 'PaperMod'
+
+[menu]
+  [[menu.main]]
+    identifier = "product"
+    name = "Products"
+    url = "/products/"
+    weight = 10
+  [[menu.main]]
+    identifier = "leetcode"
+    name = "LeetCode"
+    url = "/categories/leetcode/"
+    weight = 20

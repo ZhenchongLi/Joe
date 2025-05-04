@@ -1,10 +1,9 @@
 +++
 date = '2025-05-04T20:20:46+08:00'
 draft = true
-title = '零钱兑换'
+title = '322. 零钱兑换'
+categories = ['leetcode']
 +++
-
-# 322. 零钱兑换
 
 [LeetCode链接](https://leetcode.com/problems/coin-change/)
 
