@@ -1,0 +1,14 @@
+{{ $original := resources.Get (printf "images/%s" (.Get "src")) }}
+{{ $width := .Get "width" | default "800" }}
+{{ $height := .Get "height" | default "" }}
+
+{{ $size := printf "%sx%s" $width $height }}
+{{ $image := $original.Resize $size }}
+
+<figure>
+  <img src="{{ $image.RelPermalink }}"
+       alt="{{ .Get "alt" | default "" }}"
+       width="{{ $width }}"
+       loading="lazy">
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
