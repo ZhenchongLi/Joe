@@ -88,3 +88,8 @@ Focus秉承"极简有效"的设计哲学：
 - 学习与研究
 - 创意工作
 - 需要长时间保持专注的任何任务
+
+## 下载
+
+- [GitHub 仓库](https://github.com/ZhenchongLi/Focus) - 查看源代码和文档
+- [最新版本下载](https://github.com/ZhenchongLi/Focus/releases/) - 获取最新发布的版本
