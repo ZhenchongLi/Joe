@@ -4,6 +4,7 @@ draft = false
 title = "Understanding Binary Trees: A Concise Guide"
 description = "A comprehensive yet simple introduction to binary trees, with Python implementations and common LeetCode problems"
 categories = ['leetcode']
+tags = [ '二叉树', '数据结构']
 +++
 
 Binary trees are fundamental data structures in computer science that appear frequently in coding interviews and real-world applications. This guide offers a straightforward explanation of binary trees, their implementation in Python, and common problem-solving patterns.
