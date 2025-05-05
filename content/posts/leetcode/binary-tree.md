@@ -1,6 +1,6 @@
 +++
 date = '2025-05-05T10:00:46+08:00'
-draft = false
+draft = true
 title = "Understanding Binary Trees: A Concise Guide"
 description = "A comprehensive yet simple introduction to binary trees, with Python implementations and common LeetCode problems"
 categories = ['leetcode']
