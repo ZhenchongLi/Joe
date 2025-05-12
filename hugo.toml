@@ -14,15 +14,21 @@ anchor = "smart"
 # 默认背景色（用于不支持透明度的格式）
 bgColor = "#ffffff"
 
+[[menu.main]]
+    identifier = "thinking"
+    name = "Thinking"
+    url = "/categories/thinking/"
+    weight = 10
+
 [menu]
   [[menu.main]]
     identifier = "products"
     name = "Products"
     url = "/categories/products/"
-    weight = 10
+    weight = 20
 
   [[menu.main]]
     identifier = "leetcode"
     name = "LeetCode"
     url = "/categories/leetcode/"
-    weight = 20
+    weight = 30
