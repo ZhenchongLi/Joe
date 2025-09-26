@@ -32,3 +32,9 @@ bgColor = "#ffffff"
     name = "LeetCode"
     url = "/categories/leetcode/"
     weight = 30
+
+  [[menu.main]]
+    identifier = "ai"
+    name = "AI"
+    url = "/categories/ai/"
+    weight = 40
