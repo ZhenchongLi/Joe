@@ -28,13 +28,13 @@ anchor = "smart"
 # 默认背景色（用于不支持透明度的格式）
 bgColor = "#ffffff"
 
-[[menu.main]]
-    identifier = "thinking"
-    name = "Thinking"
-    url = "/categories/thinking/"
+[menu]
+  [[menu.main]]
+    identifier = "ai"
+    name = "AI"
+    url = "/categories/ai/"
     weight = 10
 
-[menu]
   [[menu.main]]
     identifier = "products"
     name = "Products"
@@ -46,9 +46,3 @@ bgColor = "#ffffff"
     name = "LeetCode"
     url = "/categories/leetcode/"
     weight = 30
-
-  [[menu.main]]
-    identifier = "artificial-intelligence"
-    name = "AI"
-    url = "/categories/人工智能/"
-    weight = 40

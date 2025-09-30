@@ -2,8 +2,8 @@
 title: "多智能体系统的本质：搜索、压缩与Token消耗的系统性分析"
 date: 2025-09-30T00:00:00+08:00
 draft: false
-tags: ["AI", "多智能体", "机器学习", "系统架构"]
-categories: ["AI技术"]
+tags: ["多智能体", "机器学习", "系统架构", "AI技术"]
+categories: ["AI"]
 author: "Joe"
 description: "深入分析多智能体系统的核心价值与技术本质，从搜索压缩理论和Token消耗角度重新理解AI系统设计"
 ---
