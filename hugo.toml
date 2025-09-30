@@ -34,7 +34,7 @@ bgColor = "#ffffff"
     weight = 30
 
   [[menu.main]]
-    identifier = "ai"
+    identifier = "artificial-intelligence"
     name = "AI"
-    url = "/categories/ai/"
+    url = "/categories/人工智能/"
     weight = 40
