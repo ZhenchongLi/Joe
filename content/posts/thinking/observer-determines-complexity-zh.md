@@ -2,7 +2,8 @@
 date = '2025-05-12T08:59:43+08:00'
 draft = false
 title = '观察者选择与计算复杂性：为什么P≠NP可能是世界的本源'
-categories = ['thinking']
+categories = ['AI']
+tags = ['哲学思考', '计算复杂性', 'P vs NP', '意识']
 +++
 
 ## 引言

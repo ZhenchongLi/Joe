@@ -4,20 +4,6 @@ languageCode = 'zh-cn'
 title = 'Joe'
 theme = 'PaperMod'
 
-# Custom output format for llms.txt
-[outputFormats]
-  [outputFormats.llmstxt]
-    name = "llmstxt"
-    mediaType = "text/plain"
-    baseName = "llms"
-    path = ""
-    isPlainText = true
-    notAlternative = true
-
-# Add llmstxt to home page outputs
-[outputs]
-  home = ["HTML", "RSS", "llmstxt"]
-
 [imaging]
 # 默认重采样过滤器，用于调整大小
 resampleFilter = "box"
@@ -28,13 +14,13 @@ anchor = "smart"
 # 默认背景色（用于不支持透明度的格式）
 bgColor = "#ffffff"
 
-[menu]
-  [[menu.main]]
-    identifier = "ai"
-    name = "AI"
-    url = "/categories/ai/"
+[[menu.main]]
+    identifier = "thinking"
+    name = "Thinking"
+    url = "/categories/thinking/"
     weight = 10
 
+[menu]
   [[menu.main]]
     identifier = "products"
     name = "Products"
@@ -46,3 +32,9 @@ bgColor = "#ffffff"
     name = "LeetCode"
     url = "/categories/leetcode/"
     weight = 30
+
+  [[menu.main]]
+    identifier = "artificial-intelligence"
+    name = "AI"
+    url = "/categories/人工智能/"
+    weight = 40

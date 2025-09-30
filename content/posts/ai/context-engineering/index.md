@@ -3,7 +3,7 @@ date = '2025-09-25T22:10:00+08:00'
 draft = false
 title = "Context Engineering：系统性构建AI上下文架构"
 description = "大多数AI Agent失败的根因不是模型能力，而是上下文工程的缺失。本文构建Context Engineering的完整理论框架与实现方法。"
-categories = ['ai']
+categories = ['AI']
 tags = ['Context Engineering', 'AI Architecture', 'System Design', 'LLM Engineering']
 +++
 
