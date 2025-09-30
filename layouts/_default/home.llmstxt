@@ -1,0 +1,25 @@
+# {{ .Site.Title }} - LLM Content Index
+# Generated: {{ now.Format "2006-01-02T15:04:05Z07:00" }}
+# Base URL: {{ .Site.BaseURL }}
+# Language: {{ .Site.LanguageCode }}
+{{- if .Site.Params.description }}
+# Description: {{ .Site.Params.description }}
+{{- end }}
+
+{{- $pages := .Site.RegularPages }}
+{{- if $pages }}
+# Articles (newest first)
+{{ range $pages.ByDate.Reverse }}
+{{- if not .Draft }}
+{{- $category := "Uncategorized" }}
+{{- if .Params.categories }}
+  {{- $category = index .Params.categories 0 }}
+  {{- if eq $category "人工智能" }}{{ $category = "AI" }}{{ end }}
+  {{- $category = title $category }}
+{{- end }}
+{{ .Date.Format "2006-01-02" }} {{ $category }} {{ .Title }} - {{ .Permalink }}
+{{- end }}
+{{- end }}
+{{- else }}
+# No articles available
+{{- end }}
