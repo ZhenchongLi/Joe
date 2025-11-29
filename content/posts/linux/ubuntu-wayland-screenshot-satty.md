@@ -4,7 +4,7 @@ draft = false
 title = "Ubuntu GNOME Wayland 下的终极截图方案：原生捕获 + Rust 编辑器 Satty"
 description = "在 Ubuntu Wayland 环境下，结合 GNOME 原生接口和 Rust 编写的 Satty 工具，打造一套完美的截图工作流。支持区域截图、标注、马赛克、复制到剪贴板等功能。"
 categories = ['Linux']
-tags = ['Ubuntu', 'Wayland', 'Screenshot', 'Satty', 'Rust', 'GNOME', 'Tools']
+tags = ['Ubuntu', 'Wayland', 'Screenshot', 'Satty', 'Rust', 'GNOME', 'Tools', 'AI', 'Products']
 +++
 
 > **懒人福音**：如果你觉得手动配置太繁琐，可以直接复制本文内容给 [Claude Code](https://claude.com/claude-code)，让 AI 助手自动帮你完成所有安装和配置步骤。
