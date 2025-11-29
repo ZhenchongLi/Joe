@@ -1,0 +1,176 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+    {{- if not (.Param "disableLLMCopy") }}
+    <div class="post-actions">
+      {{- $primaryCat := "" }}
+      {{- with .Params.categories }}{{ $primaryCat = index . 0 }}{{ end }}
+      <button type="button" class="copy-llm-button" data-llm-copy
+        data-title="{{ .Title }}"
+        data-url="{{ .Permalink }}"
+        data-date="{{ .Date.Format "2006-01-02" }}"
+        data-category="{{ $primaryCat }}">
+        {{ default "Copy to LLM" (i18n "copy_to_llm") }}
+      </button>
+      <span class="copy-llm-feedback" aria-live="polite"></span>
+    </div>
+    <style>
+      .copy-llm-button {
+        margin-top: 0.6rem;
+        padding: 0.45rem 0.9rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--secondary);
+        background: var(--entry);
+        color: var(--primary);
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        transition: border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+      }
+
+      .copy-llm-button:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        transform: translateY(-1px);
+      }
+
+      .copy-llm-feedback {
+        margin-left: 0.5rem;
+        color: var(--secondary);
+        font-size: 0.95rem;
+      }
+    </style>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- if not (.Param "disableLLMCopy") }}
+<script>
+  (() => {
+    const button = document.querySelector('[data-llm-copy]');
+    if (!button) return;
+    const feedback = button.parentElement.querySelector('.copy-llm-feedback');
+    const article = document.querySelector('.post-single');
+    const body = article ? article.querySelector('.post-content') : null;
+    const decode = (value) => value ? value.trim() : '';
+
+    const buildPayload = () => {
+      const title = decode(button.dataset.title);
+      const url = decode(button.dataset.url);
+      const date = decode(button.dataset.date);
+      const category = decode(button.dataset.category);
+      const text = body ? body.innerText.trim() : '';
+      const lines = [
+        title ? `Title: ${title}` : null,
+        url ? `URL: ${url}` : null,
+        date ? `Date: ${date}` : null,
+        category ? `Category: ${category}` : null,
+        'Format: Markdown-like text for LLM consumption',
+        '---',
+        text
+      ].filter(Boolean);
+      return lines.join('\n');
+    };
+
+    const copyText = async (payload) => {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(payload);
+        return true;
+      }
+      const textarea = document.createElement('textarea');
+      textarea.value = payload;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return ok;
+    };
+
+    const setFeedback = (message) => {
+      if (!feedback) return;
+      feedback.textContent = message;
+      if (message) {
+        setTimeout(() => {
+          feedback.textContent = '';
+        }, 1800);
+      }
+    };
+
+    button.addEventListener('click', async () => {
+      const payload = buildPayload();
+      try {
+        const success = await copyText(payload);
+        setFeedback(success ? 'Copied for LLM' : 'Copy failed');
+      } catch (err) {
+        console.error('Copy to LLM failed', err);
+        setFeedback('Copy failed');
+      }
+    });
+  })();
+</script>
+{{- end }}
+
+{{- end }}{{/* end main */}}
