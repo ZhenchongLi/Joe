@@ -7,6 +7,8 @@ categories = ['Linux']
 tags = ['Ubuntu', 'Wayland', 'Screenshot', 'Satty', 'Rust', 'GNOME', 'Tools']
 +++
 
+> **懒人福音**：如果你觉得手动配置太繁琐，可以直接复制本文内容给 [Claude Code](https://claude.com/claude-code)，让 AI 助手自动帮你完成所有安装和配置步骤。
+
 ## 前言：Wayland 下的截图之痛
 
 如果你是 Ubuntu 22.04 或 24.04 的用户，并且正在使用默认的 GNOME Wayland 桌面，你大概率经历过截图工具的痛点：
@@ -285,6 +287,29 @@ save-after-copy = true  # 复制后也保存
 output-filename = "~/Pictures/Screenshots/screenshot-{timestamp}.png"
 ```
 
+## 卸载清理
+
+如果你需要卸载这套方案，可以按以下步骤清理：
+
+```bash
+# 1. 删除快捷键配置
+gsettings reset org.gnome.settings-daemon.plugins.media-keys custom-keybindings
+
+# 2. 删除脚本和配置文件
+rm -f ~/.local/bin/smart-shot
+rm -rf ~/.config/satty
+
+# 3. 卸载 Satty（如果是通过 cargo 安装）
+cargo uninstall satty
+
+# 4. 卸载系统依赖（可选，如果不再需要）
+sudo apt remove gnome-screenshot wl-clipboard
+
+# 5. 清理临时文件
+rm -f /tmp/screenshot_*.png
+```
+
+> **给 Claude Code 用户**：如果你是通过 Claude Code 安装的，可以直接把上面的清理命令复制给它，让它帮你完成卸载。
 
 ## 参考资源
 
