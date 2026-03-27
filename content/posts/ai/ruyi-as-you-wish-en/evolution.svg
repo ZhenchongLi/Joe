@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="ebg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <filter id="es">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <marker id="ea" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#ebg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Evolution of Methodology / 方法论演进</text>
+
+  <!-- Timeline arrow -->
+  <line x1="60" y1="380" x2="740" y2="380" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ea)"/>
+  <text x="760" y="385" font-size="11" fill="#94a3b8">time</text>
+
+  <!-- Era 1: Waterfall / 瀑布 -->
+  <g transform="translate(100, 70)">
+    <rect width="140" height="280" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#es)"/>
+    <rect width="140" height="40" rx="10" fill="#94a3b8"/>
+    <rect y="40" width="140" height="1" fill="#e2e8f0"/>
+    <text x="70" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Waterfall</text>
+    <!-- Steps flowing down -->
+    <rect x="20" y="56" width="100" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="70" y="76" text-anchor="middle" font-size="11" fill="#475569">Require / 需求</text>
+    <line x1="70" y1="86" x2="70" y2="98" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="20" y="98" width="100" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="70" y="118" text-anchor="middle" font-size="11" fill="#475569">Design / 设计</text>
+    <line x1="70" y1="128" x2="70" y2="140" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="20" y="140" width="100" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="70" y="160" text-anchor="middle" font-size="11" fill="#475569">Build / 开发</text>
+    <line x1="70" y1="170" x2="70" y2="182" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="20" y="182" width="100" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="70" y="202" text-anchor="middle" font-size="11" fill="#475569">Test / 测试</text>
+    <line x1="70" y1="212" x2="70" y2="224" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="20" y="224" width="100" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="70" y="244" text-anchor="middle" font-size="11" fill="#475569">Deploy / 部署</text>
+    <!-- Label -->
+    <text x="70" y="274" text-anchor="middle" font-size="10" fill="#94a3b8">linear, slow</text>
+  </g>
+
+  <!-- Era 2: Agile / 敏捷 -->
+  <g transform="translate(280, 70)">
+    <rect width="140" height="280" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#es)"/>
+    <rect width="140" height="40" rx="10" fill="#3b82f6"/>
+    <text x="70" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Agile / 敏捷</text>
+    <!-- Sprint loop -->
+    <circle cx="70" cy="160" r="55" fill="none" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="6 3"/>
+    <text x="70" y="135" text-anchor="middle" font-size="11" fill="#1d4ed8" font-weight="600">Sprint</text>
+    <text x="70" y="155" text-anchor="middle" font-size="10" fill="#475569">Plan → Build</text>
+    <text x="70" y="170" text-anchor="middle" font-size="10" fill="#475569">→ Review →</text>
+    <text x="70" y="185" text-anchor="middle" font-size="10" fill="#475569">Retro ↻</text>
+    <!-- Curved arrow suggesting loop -->
+    <path d="M 105 120 A 50 50 0 1 1 100 118" fill="none" stroke="#3b82f6" stroke-width="2" marker-end="url(#ea)"/>
+    <text x="70" y="240" text-anchor="middle" font-size="10" fill="#3b82f6">2-week sprints</text>
+    <text x="70" y="256" text-anchor="middle" font-size="10" fill="#94a3b8">human teams</text>
+  </g>
+
+  <!-- Era 3: AI Harness -->
+  <g transform="translate(460, 70)">
+    <rect width="140" height="280" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#es)"/>
+    <rect width="140" height="40" rx="10" fill="#f59e0b"/>
+    <text x="70" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">AI Harness</text>
+    <!-- Tighter loop -->
+    <circle cx="70" cy="155" r="42" fill="none" stroke="#fde68a" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="70" y="140" text-anchor="middle" font-size="11" fill="#92400e" font-weight="600">Loop</text>
+    <text x="70" y="158" text-anchor="middle" font-size="10" fill="#475569">Prompt → AI</text>
+    <text x="70" y="173" text-anchor="middle" font-size="10" fill="#475569">→ Verify ↻</text>
+    <path d="M 98 122 A 38 38 0 1 1 94 120" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#ea)"/>
+    <text x="70" y="220" text-anchor="middle" font-size="10" fill="#f59e0b">minutes</text>
+    <text x="70" y="236" text-anchor="middle" font-size="10" fill="#94a3b8">code-only</text>
+    <text x="70" y="252" text-anchor="middle" font-size="10" fill="#94a3b8">dev-centric</text>
+  </g>
+
+  <!-- Era 4: Ruyi / 如意 -->
+  <g transform="translate(640, 70)">
+    <rect width="140" height="280" rx="10" fill="#fff" stroke="#a78bfa" stroke-width="2" filter="url(#es)"/>
+    <rect width="140" height="40" rx="10" fill="url(#wish)"/>
+    <text x="70" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Ruyi / 如意</text>
+    <!-- Tight universal loop -->
+    <circle cx="70" cy="150" r="36" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="70" y="142" text-anchor="middle" font-size="20">🪄</text>
+    <text x="70" y="162" text-anchor="middle" font-size="10" font-weight="600" fill="#6d28d9">any task</text>
+    <path d="M 94 120 A 32 32 0 1 1 90 118" fill="none" stroke="#8b5cf6" stroke-width="2.5" marker-end="url(#ea)"/>
+    <text x="70" y="210" text-anchor="middle" font-size="10" fill="#7c3aed">seconds–minutes</text>
+    <text x="70" y="226" text-anchor="middle" font-size="10" fill="#94a3b8">any domain</text>
+    <text x="70" y="242" text-anchor="middle" font-size="10" fill="#94a3b8">anyone</text>
+    <!-- Star highlight -->
+    <text x="70" y="270" text-anchor="middle" font-size="10" font-weight="600" fill="#7c3aed">✦ generalized</text>
+  </g>
+
+  <!-- Connecting arrows between columns -->
+  <path d="M 240 210 L 272 210" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ea)"/>
+  <path d="M 420 210 L 452 210" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ea)"/>
+  <path d="M 600 210 L 632 210" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ea)"/>
+
+  <!-- Bottom annotations -->
+  <text x="170" y="400" text-anchor="middle" font-size="10" fill="#94a3b8">months</text>
+  <text x="350" y="400" text-anchor="middle" font-size="10" fill="#94a3b8">weeks</text>
+  <text x="530" y="400" text-anchor="middle" font-size="10" fill="#94a3b8">minutes</text>
+  <text x="710" y="400" text-anchor="middle" font-size="10" fill="#7c3aed" font-weight="600">seconds</text>
+</svg>
