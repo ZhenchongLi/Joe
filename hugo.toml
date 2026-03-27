@@ -40,9 +40,3 @@ bgColor = "#ffffff"
     name = "Products"
     url = "/categories/products/"
     weight = 20
-
-  [[menu.main]]
-    identifier = "cat-leetcode"
-    name = "LeetCode"
-    url = "/categories/leetcode/"
-    weight = 30
