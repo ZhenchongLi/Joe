@@ -30,7 +30,7 @@ bgColor = "#ffffff"
 
 [menu]
   [[menu.main]]
-    identifier = "ai"
+    identifier = "cat-ai"
     name = "AI"
     url = "/categories/ai/"
     weight = 10
