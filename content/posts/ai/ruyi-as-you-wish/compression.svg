@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="cbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="loopG" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="inputG" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="compressG" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <filter id="cs">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <marker id="ca" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="700" height="400" fill="url(#cbg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="350" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Loop + Input = Compression / 循环 + 输入 = 压缩</text>
+
+  <!-- Left side: Loop -->
+  <g transform="translate(80, 80)">
+    <rect width="180" height="200" rx="14" fill="#fff" stroke="#c4b5fd" stroke-width="1.5" filter="url(#cs)"/>
+    <rect width="180" height="44" rx="14" fill="url(#loopG)"/>
+    <text x="90" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Loop / 循环</text>
+    <!-- Loop visualization -->
+    <circle cx="90" cy="130" r="44" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+    <path d="M 122 96 A 40 40 0 1 1 118 94" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
+    <polygon points="122,90 128,100 116,100" fill="#8b5cf6"/>
+    <text x="90" y="125" text-anchor="middle" font-size="10" fill="#6d28d9">wish → build</text>
+    <text x="90" y="140" text-anchor="middle" font-size="10" fill="#6d28d9">→ review →</text>
+    <text x="90" y="155" text-anchor="middle" font-size="10" fill="#6d28d9">converge ↻</text>
+  </g>
+
+  <!-- Plus sign -->
+  <g transform="translate(290, 160)">
+    <circle cx="20" cy="20" r="20" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="20" y="27" text-anchor="middle" font-size="24" font-weight="700" fill="#64748b">+</text>
+  </g>
+
+  <!-- Middle: Input -->
+  <g transform="translate(360, 80)">
+    <rect width="140" height="200" rx="14" fill="#fff" stroke="#93c5fd" stroke-width="1.5" filter="url(#cs)"/>
+    <rect width="140" height="44" rx="14" fill="url(#inputG)"/>
+    <text x="70" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Input / 输入</text>
+    <!-- Input items -->
+    <g transform="translate(16, 60)">
+      <rect width="108" height="28" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="54" y="19" text-anchor="middle" font-size="11" fill="#1d4ed8">spec / 规格</text>
+    </g>
+    <g transform="translate(16, 96)">
+      <rect width="108" height="28" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="54" y="19" text-anchor="middle" font-size="11" fill="#1d4ed8">rules / 规则</text>
+    </g>
+    <g transform="translate(16, 132)">
+      <rect width="108" height="28" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="54" y="19" text-anchor="middle" font-size="11" fill="#1d4ed8">context / 上下文</text>
+    </g>
+  </g>
+
+  <!-- Equals sign -->
+  <path d="M 520 172 L 548 172" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 520 184 L 548 184" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Right side: Compression result -->
+  <g transform="translate(568, 80)">
+    <rect width="112" height="200" rx="14" fill="#fff" stroke="#6ee7b7" stroke-width="1.5" filter="url(#cs)"/>
+    <rect width="112" height="44" rx="14" fill="url(#compressG)"/>
+    <text x="56" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Compression</text>
+    <text x="56" y="38" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">压缩</text>
+    <!-- Compression visual: wide to narrow funnel -->
+    <polygon points="16,70 96,70 76,170 36,170" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5" stroke-linejoin="round"/>
+    <text x="56" y="100" text-anchor="middle" font-size="10" fill="#065f46">vague idea</text>
+    <text x="56" y="114" text-anchor="middle" font-size="10" fill="#065f46">模糊想法</text>
+    <text x="56" y="148" text-anchor="middle" font-size="10" font-weight="600" fill="#065f46">precise</text>
+    <text x="56" y="162" text-anchor="middle" font-size="10" font-weight="600" fill="#065f46">精确结果</text>
+    <text x="56" y="188" text-anchor="middle" font-size="22">✦</text>
+  </g>
+
+  <!-- Bottom formula bar -->
+  <rect x="100" y="320" width="500" height="54" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cs)"/>
+  <text x="350" y="345" text-anchor="middle" font-size="13" fill="#475569">
+    <tspan font-weight="600" fill="#7c3aed">Each loop</tspan> refines with <tspan font-weight="600" fill="#2563eb">structured input</tspan>,
+  </text>
+  <text x="350" y="364" text-anchor="middle" font-size="13" fill="#475569">
+    <tspan font-weight="600" fill="#059669">compressing</tspan> intent into reality / 将意图压缩为现实
+  </text>
+</svg>

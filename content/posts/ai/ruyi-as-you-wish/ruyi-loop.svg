@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="wish" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="impl" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="review" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="converge" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="500" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="300" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Ruyi Loop / 如意循环</text>
+
+  <!-- Center circle with ruyi icon -->
+  <circle cx="300" cy="265" r="42" fill="#fff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="300" y="258" text-anchor="middle" font-size="28">🪄</text>
+  <text x="300" y="280" text-anchor="middle" font-size="11" font-weight="600" fill="#64748b">ruyi</text>
+
+  <!-- Nodes -->
+  <!-- Wish / 心想 - Top -->
+  <rect x="232" y="80" width="136" height="64" rx="32" fill="url(#wish)" filter="url(#shadow)"/>
+  <text x="300" y="107" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Wish / 心想</text>
+  <text x="300" y="126" text-anchor="middle" font-size="11" fill="#ede9fe">describe intent</text>
+
+  <!-- Implement / 实现 - Right -->
+  <rect x="420" y="233" width="136" height="64" rx="32" fill="url(#impl)" filter="url(#shadow)"/>
+  <text x="488" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Build / 实现</text>
+  <text x="488" y="279" text-anchor="middle" font-size="11" fill="#dbeafe">AI executes</text>
+
+  <!-- Review / 审查 - Bottom -->
+  <rect x="232" y="386" width="136" height="64" rx="32" fill="url(#review)" filter="url(#shadow)"/>
+  <text x="300" y="413" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Review / 审查</text>
+  <text x="300" y="432" text-anchor="middle" font-size="11" fill="#fef3c7">evaluate result</text>
+
+  <!-- Converge / 收敛 - Left -->
+  <rect x="44" y="233" width="136" height="64" rx="32" fill="url(#converge)" filter="url(#shadow)"/>
+  <text x="112" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Converge / 收敛</text>
+  <text x="112" y="279" text-anchor="middle" font-size="11" fill="#d1fae5">refine &amp; loop</text>
+
+  <!-- Arrows (clockwise) -->
+  <!-- Wish → Build -->
+  <path d="M 368 128 Q 430 160 436 233" fill="none" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrowGray)"/>
+  <!-- Build → Review -->
+  <path d="M 436 297 Q 430 370 368 402" fill="none" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrowGray)"/>
+  <!-- Review → Converge -->
+  <path d="M 232 402 Q 170 370 164 297" fill="none" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrowGray)"/>
+  <!-- Converge → Wish -->
+  <path d="M 164 233 Q 170 160 232 128" fill="none" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrowGray)"/>
+
+  <!-- Iteration badge -->
+  <rect x="230" y="468" width="140" height="26" rx="13" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="300" y="486" text-anchor="middle" font-size="11" fill="#64748b">↻ iterate until done</text>
+</svg>
