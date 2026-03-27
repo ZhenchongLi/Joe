@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 320" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Left: Traditional -->
+  <rect x="10" y="10" width="370" height="300" rx="12" fill="#fef3f3" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="195" y="35" text-anchor="middle" fill="#c0392b" font-weight="bold" font-size="15">传统方案</text>
+
+  <rect x="140" y="50" width="100" height="36" rx="6" fill="#4a9eff" stroke="#357abd" stroke-width="1"/>
+  <text x="190" y="73" text-anchor="middle" fill="#fff" font-size="12">.docx</text>
+
+  <line x1="190" y1="86" x2="190" y2="105" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="110" y="108" width="160" height="36" rx="6" fill="#fff" stroke="#aaa" stroke-width="1"/>
+  <text x="190" y="131" text-anchor="middle" fill="#333" font-size="12">解析为对象模型</text>
+
+  <line x1="190" y1="144" x2="190" y2="163" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="110" y="166" width="160" height="36" rx="6" fill="#f39c12" stroke="#d4861a" stroke-width="1"/>
+  <text x="190" y="189" text-anchor="middle" fill="#fff" font-size="12">AI 重写全部内容</text>
+
+  <line x1="190" y1="202" x2="190" y2="221" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="115" y="224" width="150" height="36" rx="6" fill="#fff" stroke="#aaa" stroke-width="1"/>
+  <text x="190" y="247" text-anchor="middle" fill="#333" font-size="12">序列化回 docx</text>
+
+  <line x1="190" y1="260" x2="190" y2="279" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <text x="190" y="297" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">❌ SmartArt 丢失  ❌ 图表损坏  ❌ 格式走样</text>
+
+  <!-- Right: Docmod -->
+  <rect x="400" y="10" width="370" height="300" rx="12" fill="#f0faf4" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="585" y="35" text-anchor="middle" fill="#27ae60" font-weight="bold" font-size="15">Docmod</text>
+
+  <rect x="530" y="50" width="100" height="36" rx="6" fill="#4a9eff" stroke="#357abd" stroke-width="1"/>
+  <text x="580" y="73" text-anchor="middle" fill="#fff" font-size="12">.docx</text>
+
+  <line x1="580" y1="86" x2="580" y2="105" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="510" y="108" width="140" height="36" rx="6" fill="#fff" stroke="#aaa" stroke-width="1"/>
+  <text x="580" y="131" text-anchor="middle" fill="#333" font-size="12">转为扁平 HTML</text>
+
+  <line x1="580" y1="144" x2="580" y2="163" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="490" y="166" width="180" height="36" rx="6" fill="#f39c12" stroke="#d4861a" stroke-width="1"/>
+  <text x="580" y="189" text-anchor="middle" fill="#fff" font-size="12">AI 输出 3 个变更片段</text>
+
+  <line x1="580" y1="202" x2="580" y2="221" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <rect x="500" y="224" width="160" height="36" rx="6" fill="#9b59b6" stroke="#7d3c98" stroke-width="1"/>
+  <text x="580" y="247" text-anchor="middle" fill="#fff" font-size="12">XML 节点级手术</text>
+
+  <!-- Arrow: original XML feeds into patch -->
+  <path d="M 580 86 Q 440 86 440 244 L 497 244" fill="none" stroke="#4a9eff" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="432" y="170" text-anchor="middle" fill="#4a9eff" font-size="10" transform="rotate(-90, 432, 170)">原始 XML</text>
+
+  <line x1="580" y1="260" x2="580" y2="279" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <text x="585" y="297" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">✅ 一切保留  ✅ 只改了 3 处</text>
+</svg>
