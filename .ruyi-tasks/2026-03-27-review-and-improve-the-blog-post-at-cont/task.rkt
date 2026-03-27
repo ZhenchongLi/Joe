@@ -1,0 +1,18 @@
+(ruyi-task
+  (goal "Review and improve content/posts/ai/docmod-xml-surgery/index.md: remove AI-flavored rhetorical crutches, increase information density, verify technical accuracy against docmod source code")
+  (build ("hugo --gc --minify"))
+  (test ())
+  (max-revisions 3)
+  (min-score 8)
+  (max-diff 200)
+  (reviewer-model "opus")
+  (auto-merge #t)
+  (track #t)
+  (forbidden ("content/posts/ai/docmod-xml-surgery/pipeline.svg" "content/posts/ai/docmod-xml-surgery/comparison.svg"))
+  (context ("content/posts/ai/docmod-xml-surgery/index.md"))
+  (judgement "Every sentence must carry new information. Zero tolerance for: (1) 不是X而是Y / 不是X是Y contrast patterns (2) sentences that restate what the previous sentence already said (3) filler transitions like 具体来说 or 简单来说 that add no content. Technical claims must match docmod source code. The post should read like a dense technical note, not an AI-generated explainer. Check that the title avoids the 而不是 pattern.")
+  (subtasks
+    ("Rewrite the title and description in frontmatter: the current title '让AI对Word做手术，而不是换头' uses the forbidden 而不是 pattern. Find a title that conveys the same idea without rhetorical contrast. Update the description to match.")
+    ("Cut zero-information sentences and merge redundant ones throughout the post. Specific targets: (1) '目前缺少一个好的工具让AI在保留文档完整性的前提下做局部编辑。Docmod就是为了解决这个问题。' — two sentences saying one thing (2) '要理解为什么这件事这么难，先看看.docx到底是什么' — filler transition (3) '这种简陋的设计有一个精妙的性质' — drop the meta-commentary, just state the property (4) any other sentence that exists only to transition or summarize without adding facts")
+    ("Fix technical accuracy: (1) the mapping table maps data-id to (Start, End) index ranges, not single indices — clarify this (2) SDT content controls: WPS documents may lose paragraphs inside SDT, this is a real limitation not just intentional non-support — mention in 已知限制 (3) nested tables are lost if ANY cell in parent table is edited, not just if the whole parent table is replaced — fix this nuance (4) verify the OpenXML code sample and token cost estimate are reasonable")
+    ("Final density pass: re-read the entire post and compress any remaining verbose passages. Eliminate redundant adjectives, unnecessary qualifiers, and any remaining contrast-pattern sentences. Ensure smooth flow after all cuts.")))
