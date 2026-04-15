@@ -18,6 +18,12 @@ theme = 'PaperMod'
 [outputs]
   home = ["HTML", "RSS", "llmstxt"]
 
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [["$$", "$$"]]
+    inline = [["$", "$"], ["\\(", "\\)"]]
+
 [imaging]
 # 默认重采样过滤器，用于调整大小
 resampleFilter = "box"
