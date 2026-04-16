@@ -165,4 +165,4 @@ jupyter lab 02_char_rnn_karpathy.ipynb
 
 ---
 
-本系列由 lizcc 与 AI 协作完成，lizcc 主导方向和质量判断。
+Powered by Joe and his agent mates.
