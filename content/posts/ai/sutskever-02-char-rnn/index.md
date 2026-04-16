@@ -162,3 +162,7 @@ jupyter lab 02_char_rnn_karpathy.ipynb
 - Loss 走势 `~79 -> ~58 -> ~30` 是 smoothed 的（EMA 0.999）
 - BPTT 是 truncated 的，seq_length=25
 - Notebook 自己的 Key Takeaways 里提到了 temperature，但代码里 `sample()` 没有 temperature 参数——文档 bug
+
+---
+
+本系列由 lizcc 与 AI 协作完成，lizcc 主导方向和质量判断。

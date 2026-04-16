@@ -177,3 +177,7 @@ jupyter lab 03_lstm_understanding.ipynb
 - 这个 notebook 没有训练循环，重点是 LSTM 结构和 gate 可视化
 - 梯度对比图是模拟的（decay factor 0.85 vs forget gate 0.95），不是真实训练的梯度。Vanilla RNN: 0.008977, LSTM: 0.225936
 - Christopher Olah 的[原文](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)是理解 LSTM 最好的入门资料
+
+---
+
+本系列由 lizcc 与 AI 协作完成，lizcc 主导方向和质量判断。
