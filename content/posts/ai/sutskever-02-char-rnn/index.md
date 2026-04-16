@@ -165,4 +165,4 @@ jupyter lab 02_char_rnn_karpathy.ipynb
 
 ---
 
-Powered by Joe, Weaver, Ruyi & Thorn.
+$$\text{article}^* = \underset{\theta}{\arg\min}\ \mathcal{L}_{\text{lizcc}}(\theta), \quad \theta \in \lbrace\text{Joe, Weaver, Ruyi, Thorn}\rbrace$$
