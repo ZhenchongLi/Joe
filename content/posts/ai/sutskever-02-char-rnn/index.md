@@ -165,4 +165,4 @@ jupyter lab 02_char_rnn_karpathy.ipynb
 
 ---
 
-Powered by Joe and his agent mates.
+Powered by Joe, Weaver, Ruyi & Thorn.

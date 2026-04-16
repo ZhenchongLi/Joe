@@ -180,4 +180,4 @@ jupyter lab 03_lstm_understanding.ipynb
 
 ---
 
-Powered by Joe and his agent mates.
+Powered by Joe, Weaver, Ruyi & Thorn.
