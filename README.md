@@ -40,3 +40,11 @@ git submodule update --remote --merge
 ## Development
 - Run local server: `hugo server -D`
 - Build production: `hugo --minify`
+
+## Ops Notes
+
+### Hugo + Netlify 时区问题（2026-04-17）
+**症状**：文章 push 后 Netlify 构建成功，但文章不出现在网站上（404）。  
+**原因**：文章 `date` 用北京时间（+08:00），Netlify 在 UTC 时区构建。例如 `2026-04-17T10:00:00+08:00` = UTC 02:00，Hugo 认为这是"未来"文章，构建时默认跳过。  
+**解法**：`netlify.toml` 的 build command 加 `--buildFuture` flag（已在 fc68bd3 修复）。  
+**结论**：同一天发的文章不再有此问题。
