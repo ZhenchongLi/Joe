@@ -1,5 +1,5 @@
 +++
-date = '2026-04-18T10:00:00+08:00'
+date = '2026-04-17T16:00:00+08:00'
 draft = false
 title = 'Sutskever 30 #05：把 RNN 全部扔掉'
 description = 'Attention 在 seq2seq 里是配角。2017 年有人问了一个问题：如果 attention 就够了，为什么还要 RNN？答案是 Transformer。'
