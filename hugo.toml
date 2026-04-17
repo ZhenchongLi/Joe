@@ -4,7 +4,7 @@ languageCode = 'zh-cn'
 title = 'Joe'
 theme = 'PaperMod'
 
-# Custom output format for llms.txt
+# Custom output formats for AI agent readability
 [outputFormats]
   [outputFormats.llmstxt]
     name = "llmstxt"
@@ -14,9 +14,17 @@ theme = 'PaperMod'
     isPlainText = true
     notAlternative = true
 
-# Add llmstxt to home page outputs
+  [outputFormats.llmsfull]
+    name = "llmsfull"
+    mediaType = "text/plain"
+    baseName = "llms-full"
+    path = ""
+    isPlainText = true
+    notAlternative = true
+
+# Add llmstxt and llmsfull to home page outputs
 [outputs]
-  home = ["HTML", "RSS", "llmstxt"]
+  home = ["HTML", "RSS", "llmstxt", "llmsfull"]
 
 [markup.goldmark.extensions.passthrough]
   enable = true

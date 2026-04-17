@@ -1,0 +1,32 @@
+# {{ .Site.Title }} - LLM Full Content
+# Generated: {{ now.Format "2006-01-02T15:04:05Z07:00" }}
+# Base URL: {{ .Site.BaseURL }}
+# Language: {{ .Site.LanguageCode }}
+# Note: Full article content for AI agents. Index-only version at /llms.txt
+{{- if .Site.Params.description }}
+# Description: {{ .Site.Params.description }}
+{{- end }}
+
+{{- $pages := .Site.RegularPages }}
+{{- range $pages.ByDate.Reverse }}
+{{- if not .Draft }}
+{{- $category := "Uncategorized" }}
+{{- if .Params.categories }}
+  {{- $category = index .Params.categories 0 }}
+  {{- if eq $category "人工智能" }}{{ $category = "AI" }}{{ end }}
+  {{- $category = title $category }}
+{{- end }}
+
+================================================================================
+Date: {{ .Date.Format "2006-01-02" }}
+Title: {{ .Title }}
+URL: {{ .Permalink }}
+Category: {{ $category }}
+{{- if .Params.description }}
+Description: {{ .Params.description }}
+{{- end }}
+================================================================================
+
+{{ .RawContent }}
+{{- end }}
+{{- end }}
