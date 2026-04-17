@@ -42,6 +42,12 @@ bgColor = "#ffffff"
     weight = 10
 
   [[menu.main]]
+    identifier = "cat-sutskever-30"
+    name = "Sutskever 30"
+    url = "/categories/sutskever-30/"
+    weight = 15
+
+  [[menu.main]]
     identifier = "cat-products"
     name = "Products"
     url = "/categories/products/"
