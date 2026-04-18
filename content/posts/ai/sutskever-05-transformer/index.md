@@ -13,7 +13,7 @@ tags = ['Sutskever 30', 'Transformer', 'Self-Attention', 'Multi-Head Attention',
 
 Seq2seq + attention 的架构里，LSTM 负责处理序列，attention 负责让 decoder 回头看。两者各司其职。但有一个问题一直没解决——LSTM 是顺序处理的。第 1 个词处理完才能处理第 2 个，第 2 个处理完才能处理第 3 个。
 
-100 个词的句子，要跑 100 步。GPU 的算力在等，模型自己在排队。
+100 个词的句子，要跑 100 步。前一步没算完，后一步就不能开始，所以很难把 GPU 并行用满。
 
 Attention 本身没有这个限制。它一次看所有位置，一次算完所有权重。
 
