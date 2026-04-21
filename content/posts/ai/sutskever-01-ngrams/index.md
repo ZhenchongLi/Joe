@@ -2,7 +2,7 @@
 date = '2026-04-21T09:00:00+08:00'
 draft = false
 title = 'Sutskever 30 #01：在神经网络之前，人们怎么猜下一个词？'
-description = '神经网络接管语言之前，主流方法一直很朴素：数频率，用前 n-1 个词预测第 n 个。它会算，也真的能干活。后来卡住，是因为窗口太短，词和词之间没有真正的相似关系。'
+description = '神经网络接管语言之前，语言模型主要靠数频率。前几个词出现过什么、后面常接什么，就照着统计表往下猜。表越做越大，句子里的关系还是留在表外。'
 categories = ['AI', 'Sutskever 30']
 tags = ['Sutskever 30', 'Language Modeling', 'n-gram', 'Bengio', 'Notebook Reading']
 +++
