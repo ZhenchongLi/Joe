@@ -17,4 +17,4 @@ command = "hugo --gc --minify --buildFuture"
 
 已在 commit `fc68bd3`（2026-04-17）修复。
 
-**结论**：以后写文章的 `date` 字段可以用任意北京时间，`--buildFuture` 保证当天发布的文章一定出现在构建结果里。
+**结论**：`--buildFuture` 在 netlify.toml 里，但 Netlify 线上构建不一定吃到（2026-04-21 实测 `17:00+08:00` 的文章被跳过）。**安全做法：发文 `date` 统一用 `09:00:00+08:00`**（= UTC 01:00，对 Netlify 任何构建时间都是过去），不依赖 `--buildFuture`。
