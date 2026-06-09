@@ -4,3 +4,14 @@ command = "hugo --gc --minify --buildFuture"
 
 [build.environment]
 HUGO_VERSION = "0.147.1" # Replace with your current Hugo version
+
+# Link headers (RFC 8288) advertising machine-readable views of the site to
+# agents. These point at resources that actually exist — the LLM text indexes
+# and the RSS feed — so they're honest, not placeholders.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '''</llms.txt>; rel="alternate"; type="text/plain"; title="LLM content index", </llms-full.txt>; rel="alternate"; type="text/plain"; title="LLM full content", </index.xml>; rel="alternate"; type="application/rss+xml"; title="RSS feed"'''
+
+# Markdown-for-agents content negotiation lives in
+# netlify/edge-functions/markdown.ts (auto-discovered by Netlify).

@@ -22,9 +22,19 @@ theme = 'PaperMod'
     isPlainText = true
     notAlternative = true
 
-# Add llmstxt and llmsfull to home page outputs
+  # Markdown for Agents: a text/markdown representation of each page,
+  # served on `Accept: text/markdown` via the Netlify edge function.
+  [outputFormats.markdown]
+    name = "markdown"
+    mediaType = "text/markdown"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+
+# Add llmstxt/llmsfull to the home page, and markdown to home + every post
 [outputs]
-  home = ["HTML", "RSS", "llmstxt", "llmsfull"]
+  home = ["HTML", "RSS", "llmstxt", "llmsfull", "markdown"]
+  page = ["HTML", "markdown"]
 
 [markup.goldmark.extensions.passthrough]
   enable = true
