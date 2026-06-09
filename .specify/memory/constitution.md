@@ -60,7 +60,7 @@ Site builds MUST be validated before merging. Changes affecting site functionali
 - Images are optimized and display correctly
 
 ### Post-merge Validation
-- Netlify deployment completes successfully
+- Cloudflare Pages deployment completes successfully
 - Live site functionality verified
 - SEO metadata properly generated
 - Site performance remains within acceptable limits

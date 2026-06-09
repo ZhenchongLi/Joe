@@ -38,7 +38,7 @@ Implement llms.txt file generation for the Hugo-based personal website to enable
 **Primary Dependencies**: Hugo (current), PaperMod theme
 **Storage**: Static files in Hugo content/ directory, output to public/
 **Testing**: Hugo build validation, manual verification of llms.txt output
-**Target Platform**: Static website hosted on Netlify
+**Target Platform**: Static website hosted on Cloudflare Pages
 **Project Type**: single - Hugo static site generator project
 **Performance Goals**: Build time impact <1 second, llms.txt file size <100KB
 **Constraints**: Must integrate with existing Hugo build process, maintain PaperMod theme compatibility

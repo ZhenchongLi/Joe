@@ -48,7 +48,7 @@
 **Rationale**:
 - Static generation aligns with Hugo's architecture
 - No runtime performance impact on site visitors
-- File is cached and served efficiently by CDN (Netlify)
+- File is cached and served efficiently by CDN (Cloudflare)
 - Build-time generation ensures content is always up-to-date
 
 **Alternatives considered**:
