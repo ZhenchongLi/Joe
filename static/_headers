@@ -1,4 +1,4 @@
-# Cloudflare Pages / Netlify both read this file.
+# Cloudflare Pages reads this file (Netlify-compatible _headers syntax).
 # Link headers (RFC 8288) advertising machine-readable views of the site to
 # agents. These point at resources that actually exist — the LLM text indexes
 # and the RSS feed — so they're honest, not placeholders.

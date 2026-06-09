@@ -22,7 +22,7 @@ This is a static website built with [Hugo](https://gohugo.io/) using the [PaperM
 Main configuration file: `hugo.toml`
 
 ## Deployment
-This site is configured for Netlify deployment (see `netlify.toml`).
+This site is deployed on Cloudflare Pages — pushing to `main` triggers an automatic build and deploy.
 
 ## Theme Management
 The PaperMod theme is included as a git submodule in `themes/PaperMod`.

@@ -10,7 +10,7 @@
 ## Build, Test, and Development Commands
 - `hugo server -D` — local dev with drafts, live reload at http://localhost:1313.
 - `hugo --minify` — production-style build; verify before pushing.
-- `hugo --gc --minify` — mirrors Netlify build (`netlify.toml`), runs garbage collection to trim assets.
+- `hugo --gc --minify` — mirrors the production build, runs garbage collection to trim assets.
 - `hugo server -D --disableFastRender` — useful when debugging template changes.
 
 ## Coding Style & Naming Conventions

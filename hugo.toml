@@ -22,8 +22,8 @@ theme = 'PaperMod'
     isPlainText = true
     notAlternative = true
 
-  # Markdown for Agents: a text/markdown representation of each page,
-  # served on `Accept: text/markdown` via the Netlify edge function.
+  # Markdown for Agents: emits a text/markdown copy of each page at
+  # <page>/index.md, linked from the HTML head via <link rel="alternate">.
   [outputFormats.markdown]
     name = "markdown"
     mediaType = "text/markdown"
