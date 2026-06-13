@@ -1,0 +1,52 @@
+/* Featured-link card (homepage). Uses PaperMod theme variables so it adapts
+   to both light and dark modes and matches the existing post cards. */
+.featured-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--gap);
+  padding: calc(var(--gap) * 1.1) var(--gap);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid var(--primary);
+  border-radius: var(--radius);
+  color: var(--primary);
+  text-decoration: none;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.featured-link:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.featured-link:active {
+  transform: scale(0.99);
+}
+
+.featured-link__eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.featured-link__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.featured-link__desc {
+  color: var(--secondary);
+  line-height: 1.55;
+}
+
+.featured-link__cta {
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.featured-link:hover .featured-link__cta {
+  text-decoration: underline;
+}

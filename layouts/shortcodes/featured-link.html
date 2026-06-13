@@ -1,0 +1,10 @@
+{{- /* A dedicated, clickable card that links out to a featured project/site.
+       Named params: url, eyebrow, title, desc, cta. External URLs open in a new tab. */ -}}
+{{- $url := .Get "url" -}}
+{{- $external := or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
+<a class="featured-link"{{ with $url }} href="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
+  {{- with .Get "eyebrow" }}<span class="featured-link__eyebrow">{{ . }}</span>{{ end }}
+  <span class="featured-link__title">{{ .Get "title" }}</span>
+  {{- with .Get "desc" }}<span class="featured-link__desc">{{ . }}</span>{{ end }}
+  {{- with .Get "cta" }}<span class="featured-link__cta">{{ . }}</span>{{ end }}
+</a>
